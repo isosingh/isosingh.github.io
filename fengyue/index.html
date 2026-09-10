@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>风月堂 - 东方雅致生活与人文风物志</title>
+<meta name="description" content="风月堂是一个专注东方雅致生活与人文风物志的内容站点，汇集文人雅集、茶事香道、器物清赏、节气风物与古典美学故事，为喜爱传统文化与慢生活的读者提供阅读与参考。">
+<meta name="keywords" content="风月堂,东方美学,传统文化,茶道香道,文人雅集,节气风物,古典生活,雅致生活">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#2b2621;
+    --ink-soft:#5b534a;
+    --paper:#f6f1e7;
+    --paper-deep:#efe7d8;
+    --jade:#4c6b5c;
+    --jade-deep:#33493f;
+    --cinnabar:#a8452f;
+    --gold:#b08b4f;
+    --line:#ddd2be;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(60,48,32,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Songti SC","STSong","Noto Serif SC",Georgia,"Microsoft YaHei",serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.85;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;}
+  h1,h2,h3{line-height:1.35;margin:0 0 .6em;font-weight:600;letter-spacing:.02em;}
+  p{margin:0 0 1em;color:var(--ink-soft);}
+
+  .wrap{width:min(1160px,92vw);margin:0 auto;}
+
+  /* 顶部装饰线 */
+  .topline{height:4px;background:linear-gradient(90deg,var(--jade),var(--gold),var(--cinnabar));}
+
+  /* 页眉 */
+  header.site-header{
+    background:rgba(246,241,231,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:14px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{
+    width:46px;height:46px;flex:0 0 46px;
+    border-radius:50%;
+    background:radial-gradient(circle at 32% 28%,#6d8f7d,var(--jade-deep));
+    color:#f4efe3;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;letter-spacing:1px;
+    box-shadow:inset 0 0 0 2px rgba(244,239,227,.35);
+  }
+  .brand-text b{display:block;font-size:20px;letter-spacing:.22em;}
+  .brand-text span{display:block;font-size:12px;color:var(--ink-soft);letter-spacing:.28em;}
+
+  nav.main-nav ul{
+    list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap;
+  }
+  nav.main-nav a{
+    display:block;padding:8px 14px;border-radius:999px;
+    font-size:15px;color:var(--ink-soft);
+    transition:.25s;
+  }
+  nav.main-nav a:hover,nav.main-nav a.active{
+    background:var(--jade);color:#f7f3e8;
+  }
+
+  /* 首屏 */
+  .hero{
+    padding:64px 0 54px;
+    background:
+      radial-gradient(1200px 420px at 82% -10%,rgba(176,139,79,.16),transparent 62%),
+      radial-gradient(760px 360px at 6% 8%,rgba(76,107,92,.14),transparent 60%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.35fr .95fr;gap:44px;align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(30px,4.4vw,46px);
+    letter-spacing:.06em;
+    margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--cinnabar);
+  }
+  .hero-lead{font-size:17px;max-width:56ch;}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px;}
+  .hero-tags span{
+    font-size:13px;padding:5px 14px;border-radius:999px;
+    border:1px solid var(--line);background:#fffdf7;color:var(--ink-soft);
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:999px;
+    font-size:15px;letter-spacing:.08em;transition:.25s;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--jade);color:#f7f3e8;}
+  .btn-primary:hover{background:var(--jade-deep);}
+  .btn-ghost{border-color:var(--gold);color:var(--gold);}
+  .btn-ghost:hover{background:var(--gold);color:#fffdf7;}
+
+  .hero-side{
+    background:#fffdf7;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 24px;
+    box-shadow:var(--shadow);
+  }
+  .hero-side h3{font-size:17px;letter-spacing:.14em;margin-bottom:14px;}
+  .hero-side ul{list-style:none;margin:0;padding:0;}
+  .hero-side li{
+    padding:11px 0;border-bottom:1px dashed var(--line);
+    font-size:15px;display:flex;justify-content:space-between;gap:12px;color:var(--ink-soft);
+  }
+  .hero-side li:last-child{border-bottom:0;}
+  .hero-side li b{color:var(--ink);font-weight:600;}
+
+  /* 通用区块 */
+  section.block{padding:56px 0;}
+  .block-head{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:18px;margin-bottom:28px;flex-wrap:wrap;
+  }
+  .block-head h2{font-size:26px;letter-spacing:.1em;margin:0;}
+  .block-head p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .block-head .more{font-size:14px;color:var(--jade);border-bottom:1px solid var(--jade);padding-bottom:2px;}
+
+  /* 栏目卡片 */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .card{
+    background:#fffdf7;border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;transition:.28s;height:100%;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfc2a8;}
+  .card .kicker{
+    font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:10px;display:block;
+  }
+  .card h3{font-size:19px;margin-bottom:10px;}
+  .card p{font-size:15px;margin-bottom:0;}
+
+  /* 风物志列表 */
+  .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  article.feature{
+    background:#fffdf7;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;display:flex;flex-direction:column;gap:8px;
+  }
+  article.feature h3{font-size:18px;margin:0;}
+  article.feature .meta{font-size:13px;color:var(--gold);letter-spacing:.12em;}
+  article.feature p{font-size:15px;margin:0;}
+
+  /* 雅集时间线 */
+  .timeline{
+    border-left:2px solid var(--line);
+    margin-left:10px;padding-left:26px;
+    display:flex;flex-direction:column;gap:26px;
+  }
+  .timeline .node{position:relative;}
+  .timeline .node::before{
+    content:"";position:absolute;left:-34px;top:8px;
+    width:12px;height:12px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--jade);
+  }
+  .timeline .node b{display:block;font-size:17px;margin-bottom:4px;}
+  .timeline .node span{font-size:13px;color:var(--gold);letter-spacing:.14em;display:block;margin-bottom:6px;}
+  .timeline .node p{font-size:15px;margin:0;}
+
+  /* 侧栏 + 主列 */
+  .split{display:grid;grid-template-columns:2fr 1fr;gap:38px;align-items:start;}
+  aside.sidebar{
+    background:#fffdf7;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;position:sticky;top:96px;
+  }
+  aside.sidebar h3{font-size:16px;letter-spacing:.16em;margin-bottom:14px;}
+  aside.sidebar ul{list-style:none;margin:0 0 22px;padding:0;}
+  aside.sidebar li{
+    font-size:15px;padding:9px 0;border-bottom:1px dashed var(--line);color:var(--ink-soft);
+  }
+  aside.sidebar li:last-child{border-bottom:0;}
+  aside.sidebar li a:hover{color:var(--cinnabar);}
+
+  /* 问答 */
+  .faq-list{display:flex;flex-direction:column;gap:14px;}
+  details.faq{
+    background:#fffdf7;border:1px solid var(--line);border-radius:12px;
+    padding:16px 20px;
+  }
+  details.faq summary{
+    cursor:pointer;font-size:16px;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::after{content:"＋";color:var(--gold);font-size:18px;}
+  details.faq[open] summary::after{content:"－";}
+  details.faq p{margin:12px 0 0;font-size:15px;}
+
+  /* 页脚 */
+  footer.site-footer{
+    background:var(--jade-deep);color:#dfe6df;padding:48px 0 26px;margin-top:20px;
+  }
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+  footer.site-footer h4{font-size:16px;letter-spacing:.16em;color:#f2ede0;margin:0 0 14px;}
+  footer.site-footer p{color:#b9c6bc;font-size:14px;margin:0 0 10px;}
+  footer.site-footer ul{list-style:none;margin:0;padding:0;}
+  footer.site-footer li{font-size:14px;padding:5px 0;color:#b9c6bc;}
+  footer.site-footer a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(223,230,223,.18);margin-top:32px;padding-top:18px;
+    text-align:center;font-size:13px;color:#9fb0a5;
+  }
+
+  /* 响应式 */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .grid-3{grid-template-columns:repeat(2,1fr);}
+    .split{grid-template-columns:1fr;}
+    aside.sidebar{position:static;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:680px){
+    body{font-size:15px;}
+    .header-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+    nav.main-nav ul{gap:2px;}
+    nav.main-nav a{padding:7px 11px;font-size:14px;}
+    .grid-3,.grid-2,.feature-list,.footer-grid{grid-template-columns:1fr;}
+    section.block{padding:40px 0;}
+    .hero{padding:44px 0 40px;}
+    .block-head h2{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+<div class="topline"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark">风月</div>
+      <div class="brand-text">
+        <b>风月堂</b>
+        <span>东方雅致 · 人文风物</span>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#top">首页</a></li>
+        <li><a href="#themes">雅事</a></li>
+        <li><a href="#chronicle">风物志</a></li>
+        <li><a href="#gather">雅集</a></li>
+        <li><a href="#guide">入门指南</a></li>
+        <li><a href="#faq">问答</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>风月堂 · 把<em>东方雅致</em>过成日常</h1>
+        <p class="hero-lead">
+          风月堂是一处关于东方生活美学的内容小筑。这里谈茶事、香道、器物清赏，也谈节气风物与文人雅集，
+          试图把古人笔下的“风月”从诗文里请出来，落回一盏茶、一炉香、一席清谈的日常之中。
+          如果你正在寻找可以慢慢读、慢慢用的传统文化内容，这里或许合适。
+        </p>
+        <div class="hero-tags">
+          <span>茶事</span>
+          <span>香道</span>
+          <span>器物清赏</span>
+          <span>节气风物</span>
+          <span>文人雅集</span>
+          <span>古典美学</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#themes">开始阅读</a>
+          <a class="btn btn-ghost" href="#guide">新手入门</a>
+        </div>
+      </div>
+      <aside class="hero-side" aria-label="本期推荐">
+        <h3>本期推荐</h3>
+        <ul>
+          <li><span>茶事 · 入门</span><b>一席茶的基本次序</b></li>
+          <li><span>香道 · 常识</span><b>线香与香丸之别</b></li>
+          <li><span>器物 · 清赏</span><b>如何挑一只趁手的杯</b></li>
+          <li><span>节气 · 风物</span><b>四时草木与案头清供</b></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 雅事栏目 -->
+  <section class="block" id="themes">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>堂中四雅事</h2>
+          <p>茶、香、器、席，是风月堂最常谈的四件事。</p>
+        </div>
+        <a class="more" href="#chronicle">查看风物志</a>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="kicker">茶 事</span>
+          <h3>从一壶水开始，安顿一段时光</h3>
+          <p>
+            茶事并不玄妙，它更接近一种节奏：烧水、温器、投茶、出汤，动作之间有留白。
+            风月堂的茶事内容偏向日常可行——如何选一只顺手的壶、不同茶类的注水方式、
+            独饮与待客的差别，都尽量讲得清楚，不故作高深。
+          </p>
+        </article>
+        <article class="card">
+          <span class="kicker">香 道</span>
+          <h3>香气是一种安静的空间语言</h3>
+          <p>
+            香在古代既是礼仪，也是清课。今天的用香场景更简单：读书、写字、静坐时点一炉，
+            让气味成为空间的底色。这里会介绍常见的香品形态、不同香材的大致气味倾向，
+            以及居家用香需要注意的通风与安全常识。
+          </p>
+        </article>
+        <article class="card">
+          <span class="kicker">器 物</span>
+          <h3>器物是手边的风景</h3>
+          <p>
+            一只杯、一方盘、一件旧木器，用得久了便有了人的痕迹。器物清赏不等于追求名贵，
+            更多是看它是否称手、是否耐看、是否愿意日日使用。风月堂谈器物的选、用、养、收，
+            也谈如何克制地添置。
+          </p>
+        </article>
+        <article class="card">
+          <span class="kicker">雅 席</span>
+          <h3>把一次相聚安排得从容</h3>
+          <p>
+            雅集的核心不是排场，而是让来的人舒服。从邀约、备席、座次到话题的起落，
+            都有一点点讲究。这里整理的是可复用的经验：小型茶会怎么办、
+            书房小聚如何布置、节气雅集可以准备些什么。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 风物志 -->
+  <section class="block" id="chronicle" style="background:var(--paper-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>风物志</h2>
+          <p>按主题整理的阅读线索，适合按顺序慢慢看。</p>
+        </div>
+      </div>
+      <div class="feature-list">
+        <article class="feature">
+          <span class="meta">茶 事 · 基 础</span>
+          <h3>一套基础茶席需要准备什么</h3>
+          <p>主泡器、公道、品杯、水方、茶巾，是多数茶席的常见配置。选择时先考虑常喝的茶类与常用人数，再考虑材质与风格，不必一次置齐。</p>
+        </article>
+        <article class="feature">
+          <span class="meta">香 事 · 常 识</span>
+          <h3>线香、盘香、香丸与香粉的差别</h3>
+          <p>形态不同，燃烧方式与气味释放节奏也不同。线香取用方便，香粉与香丸更依赖器具与手法，适合愿意慢下来的人。</p>
+        </article>
+        <article class="feature">
+          <span class="meta">器 物 · 选 择</span>
+          <h3>挑一只日日想用的杯子</h3>
+          <p>口沿的厚薄、杯身的重量、握持时手指的落点，都比外观更影响使用感受。建议先试用，再决定是否添置。</p>
+        </article>
+        <article class="feature">
+          <span class="meta">节 气 · 风 物</span>
+          <h3>案头清供与四时草木</h3>
+          <p>清供不必名贵，一枝应季的花、一块石头、一只旧盘，都可以构成案头的小景。关键是随季节更换，保持新鲜感。</p>
+        </article>
+        <article class="feature">
+          <span class="meta">文 房 · 用 具</span>
+          <h3>书桌上的常用几件</h3>
+          <p>笔、墨、纸、砚之外，镇纸、笔搁、水盂等小件往往更常被使用。挑选时以顺手为先，避免只为陈列而购置。</p>
+        </article>
+        <article class="feature">
+          <span class="meta">生 活 · 节 奏</span>
+          <h3>在忙碌里留出一段慢时间</h3>
+          <p>慢不是拖延，而是有意识地放慢某个环节。哪怕只是认真泡一杯茶、抄一段字，也能让一天的节奏有所不同。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 雅集 + 侧栏 -->
+  <section class="block" id="gather">
+    <div class="wrap split">
+      <div>
+        <div class="block-head">
+          <div>
+            <h2>雅集记事</h2>
+            <p>关于相聚的一些经验与安排思路。</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="node">
+            <span>筹 备</span>
+            <b>先定主题，再定人数</b>
+            <p>主题决定了茶品、香品与话题方向。人数宜少不宜多，四到六人通常最容易让每个人都参与进来。</p>
+          </div>
+          <div class="node">
+            <span>布 席</span>
+            <b>留出走动与落座的余地</b>
+            <p>桌面不必铺满，留白反而让人放松。光源尽量柔和，避免直射眼睛；座位之间保持舒适距离。</p>
+          </div>
+          <div class="node">
+            <span>进 行</span>
+            <b>让节奏自然，不赶流程</b>
+            <p>主人负责开场与收尾，中间不必强行推进话题。允许沉默，也允许话题跑偏，这往往是雅集最生动的部分。</p>
+          </div>
+          <div class="node">
+            <span>收 尾</span>
+            <b>整理与记录</b>
+            <p>收拾器物时顺便回顾一下当天的感受，记下用得好与可以改进的地方，下次会从容许多。</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar" aria-label="阅读指引">
+        <h3>阅读指引</h3>
+        <ul>
+          <li><a href="#themes">堂中四雅事</a></li>
+          <li><a href="#chronicle">风物志专题</a></li>
+          <li><a href="#guide">新手入门路径</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+        <h3>适合谁读</h3>
+        <ul>
+          <li>对传统文化感兴趣，但不知从何入手的人</li>
+          <li>希望把茶、香、器物融入日常的人</li>
+          <li>正在筹备小型雅集或茶会的人</li>
+          <li>喜欢慢阅读与安静内容的读者</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 入门指南 -->
+  <section class="block" id="guide" style="background:var(--paper-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>新手入门路径</h2>
+          <p>如果你刚接触东方雅致生活，可以按这个顺序慢慢来。</p>
+        </div>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="kicker">第 一 步</span>
+          <h3>先建立感受，再谈知识</h3>
+          <p>不必急着背诵茶类与香材名称。先从喝、闻、看、用开始，积累真实的感受，再去找对应的知识来解释它。</p>
+        </article>
+        <article class="card">
+          <span class="kicker">第 二 步</span>
+          <h3>从一件器物入手</h3>
+          <p>选择一件每天都会用到的东西，比如一只杯子或一只小盘。用得久了，自然会理解材质、重量与手感的关系。</p>
+        </article>
+        <article class="card">
+          <span class="kicker">第 三 步</span>
+          <h3>把节奏固定下来</h3>
+          <p>比如每天固定一段时间泡茶或写字。习惯形成之后，这些事就不再需要刻意安排，而会自然成为生活的一部分。</p>
+        </article>
+        <article class="card">
+          <span class="kicker">注 意</span>
+          <h3>量力而行，不必攀比</h3>
+          <p>雅致生活与价格没有必然关系。器物够用就好，内容适合自己就好，避免被“必须拥有”的说法推着走。</p>
+        </article>
+        <article class="card">
+          <span class="kicker">注 意</span>
+          <h3>安全永远排在前面</h3>
+          <p>用香、点烛、烧水时注意通风与看管，离开时及时熄灭。任何审美体验，都不值得以安全为代价。</p>
+        </article>
+        <article class="card">
+          <span class="kicker">注 意</span>
+          <h3>保持自己的判断</h3>
+          <p>关于茶、香、器物的说法很多，彼此未必一致。多试、多比较，形成自己的偏好，比记住标准答案更重要。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 问答 -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>常见问题</h2>
+          <p>初次接触风月堂的读者，常会问到这些。</p>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>风月堂主要提供什么内容？</summary>
+          <p>风月堂是一个围绕东方雅致生活与人文风物志的内容站点，主要涵盖茶事、香道、器物清赏、节气风物、文人雅集与古典美学等方向，以阅读类文章与经验整理为主。</p>
+        </details>
+        <details class="faq">
+          <summary>完全没有基础，可以阅读吗？</summary>
+          <p>可以。站内内容按主题与难度做了大致区分，入门类文章会尽量使用平实语言，不预设专业背景。建议从“新手入门路径”开始，按顺序阅读。</p>
+        </details>
+        <details class="faq">
+          <summary>内容是否涉及具体商品或价格推荐？</summary>
+          <p>风月堂以知识分享与经验整理为主，不提供具体商品的购买链接与价格承诺。涉及器物选择时，更多讨论判断思路与使用感受，供读者自行参考。</p>
+        </details>
+        <details class="faq">
+          <summary>可以照着内容自己办一场小型雅集吗？</summary>
+          <p>可以。雅集相关的内容以可操作的经验为主，包括筹备、布席、进行与收尾几个环节，适合小型茶会或书房小聚参考。具体安排仍需结合场地、人数与实际情况调整。</p>
+        </details>
+        <details class="faq">
+          <summary>如何持续获取更新？</summary>
+          <p>本站内容会按主题陆续补充。你可以收藏本页，或定期回访关注风物志与雅集栏目的新增文章。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>风月堂</h4>
+        <p>一处关于东方雅致生活与人文风物志的内容小筑，谈茶、谈香、谈器物，也谈四时与相聚。</p>
+        <p>愿你在忙碌之外，仍有一段时间可以慢慢过。</p>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="#themes">堂中四雅事</a></li>
+          <li><a href="#chronicle">风物志</a></li>
+          <li><a href="#gather">雅集记事</a></li>
+          <li><a href="#guide">新手入门路径</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>主题</h4>
+        <ul>
+          <li>茶事与日常饮茶</li>
+          <li>香道与居家用香</li>
+          <li>器物清赏与选择</li>
+          <li>节气风物与案头清供</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 风月堂 · 东方雅致生活与人文风物志 · 内容仅供阅读参考
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var links = document.querySelectorAll('nav.main-nav a');
+    links.forEach(function(link){
+      link.addEventListener('click', function(){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      });
+    });
+  })();
+</script>
+</body>
+        </html>
