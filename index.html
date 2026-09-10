@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冒险岛sf海-怀旧版本资讯与玩法资料索引站</title>
+<meta name="description" content="冒险岛sf海是一个围绕冒险岛怀旧版本、私服生态与经典玩法整理的资料索引页，提供版本区别、职业选择、任务路线、常见问题与安全提醒等参考内容。">
+<meta name="keywords" content="冒险岛sf海,冒险岛sf,冒险岛怀旧服,冒险岛版本资料,冒险岛职业攻略,冒险岛任务路线">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1d2433;
+    --ink-soft:#4a5568;
+    --line:#e3e8f0;
+    --paper:#f6f8fc;
+    --card:#ffffff;
+    --brand:#2f6bd8;
+    --brand-deep:#1b3f8f;
+    --brand-soft:#e8f0ff;
+    --accent:#f2994a;
+    --accent-soft:#fff2e2;
+    --green:#2f9e6e;
+    --green-soft:#e6f7ef;
+    --radius:14px;
+    --shadow:0 6px 20px rgba(31,52,94,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:var(--brand);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;}
+  .wrap{
+    width:100%;
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* ---------- 顶部 ---------- */
+  .site-header{
+    background:linear-gradient(135deg,#1b3f8f 0%,#2f6bd8 55%,#3f86e8 100%);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .site-header::after{
+    content:"";
+    position:absolute;
+    right:-80px;
+    top:-80px;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+  }
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 0;
+    position:relative;
+    z-index:2;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:.5px;
+    color:#fff;
+  }
+  .logo:hover{text-decoration:none;}
+  .logo-mark{
+    width:36px;height:36px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#ffd479,#f2994a);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;color:#5a3200;font-weight:800;
+  }
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .nav a{
+    color:rgba(255,255,255,.88);
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:14.5px;
+    transition:background .2s,color .2s;
+  }
+  .nav a:hover{
+    background:rgba(255,255,255,.16);
+    color:#fff;
+    text-decoration:none;
+  }
+  .hero{
+    position:relative;
+    z-index:2;
+    padding:34px 0 46px;
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:34px;
+    align-items:start;
+  }
+  .hero h1{
+    font-size:31px;
+    line-height:1.35;
+    margin:0 0 14px;
+    font-weight:800;
+  }
+  .hero p{
+    margin:0 0 20px;
+    color:rgba(255,255,255,.9);
+    font-size:16px;
+    max-width:640px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-block;
+    padding:11px 22px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:15px;
+    transition:transform .18s,box-shadow .18s,background .18s;
+  }
+  .btn:hover{text-decoration:none;transform:translateY(-2px);}
+  .btn-primary{
+    background:#fff;
+    color:var(--brand-deep);
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+  }
+  .btn-ghost{
+    background:rgba(255,255,255,.14);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.45);
+  }
+  .hero-side{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:var(--radius);
+    padding:18px 20px;
+    backdrop-filter:blur(2px);
+  }
+  .hero-side h2{
+    font-size:15px;
+    margin:0 0 12px;
+    color:#fff;
+    letter-spacing:.5px;
+  }
+  .hero-side ul{
+    list-style:none;
+    margin:0;padding:0;
+    font-size:14.5px;
+  }
+  .hero-side li{
+    padding:7px 0;
+    border-bottom:1px dashed rgba(255,255,255,.25);
+    color:rgba(255,255,255,.92);
+  }
+  .hero-side li:last-child{border-bottom:none;}
+  .hero-side li span{
+    color:#ffd479;
+    font-weight:700;
+    margin-right:6px;
+  }
+
+  /* ---------- 通用区块 ---------- */
+  main{padding:44px 0 20px;}
+  section{margin-bottom:52px;}
+  .sec-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:20px;
+    border-left:5px solid var(--brand);
+    padding-left:14px;
+  }
+  .sec-head h2{
+    font-size:22px;
+    margin:0;
+    font-weight:800;
+  }
+  .sec-head p{
+    margin:4px 0 0;
+    color:var(--ink-soft);
+    font-size:14.5px;
+  }
+  .sec-head .more{
+    font-size:14px;
+    white-space:nowrap;
+  }
+
+  .grid{
+    display:grid;
+    gap:20px;
+  }
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+  }
+  .card h3{
+    margin:0 0 10px;
+    font-size:17px;
+    font-weight:700;
+  }
+  .card p{
+    margin:0 0 10px;
+    color:var(--ink-soft);
+    font-size:14.8px;
+  }
+  .card p:last-child{margin-bottom:0;}
+  .tag{
+    display:inline-block;
+    font-size:12.5px;
+    padding:2px 10px;
+    border-radius:999px;
+    margin:0 6px 8px 0;
+    font-weight:600;
+  }
+  .tag-blue{background:var(--brand-soft);color:var(--brand-deep);}
+  .tag-orange{background:var(--accent-soft);color:#a35a12;}
+  .tag-green{background:var(--green-soft);color:#1f6f4c;}
+
+  /* ---------- 版本对比 ---------- */
+  .version-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    font-size:14.8px;
+  }
+  .version-table th,
+  .version-table td{
+    padding:13px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .version-table thead th{
+    background:var(--brand-deep);
+    color:#fff;
+    font-weight:600;
+    font-size:14.5px;
+    white-space:nowrap;
+  }
+  .version-table tbody tr:nth-child(even){background:#fafcff;}
+  .version-table tbody tr:last-child td{border-bottom:none;}
+
+  /* ---------- 职业列表 ---------- */
+  .job-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+  .job-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--brand);
+    border-radius:10px;
+    padding:16px 18px;
+  }
+  .job-item h3{
+    margin:0 0 6px;
+    font-size:16px;
+  }
+  .job-item p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- 时间线 ---------- */
+  .timeline{
+    position:relative;
+    padding-left:26px;
+    border-left:2px solid var(--brand-soft);
+  }
+  .timeline-item{
+    position:relative;
+    padding-bottom:22px;
+  }
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-34px;
+    top:6px;
+    width:12px;height:12px;
+    border-radius:50%;
+    background:var(--brand);
+    border:3px solid #fff;
+    box-shadow:0 0 0 2px var(--brand-soft);
+  }
+  .timeline-item h3{
+    margin:0 0 4px;
+    font-size:16px;
+  }
+  .timeline-item p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- 提示条 ---------- */
+  .notice{
+    background:var(--accent-soft);
+    border:1px solid #f6d3a8;
+    border-radius:var(--radius);
+    padding:18px 22px;
+    font-size:14.8px;
+    color:#8a4d0c;
+  }
+  .notice strong{color:#7a3f04;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    margin-bottom:12px;
+    overflow:hidden;
+  }
+  .faq-q{
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    padding:16px 20px;
+    font-size:15.5px;
+    font-weight:700;
+    color:var(--ink);
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    font-family:inherit;
+  }
+  .faq-q:hover{background:#f7faff;}
+  .faq-q .arrow{
+    color:var(--brand);
+    font-size:13px;
+    transition:transform .25s;
+    flex-shrink:0;
+  }
+  .faq-item.open .faq-q .arrow{transform:rotate(180deg);}
+  .faq-a{
+    display:none;
+    padding:0 20px 18px;
+    color:var(--ink-soft);
+    font-size:14.8px;
+  }
+  .faq-item.open .faq-a{display:block;}
+
+  /* ---------- 侧栏布局 ---------- */
+  .split{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:28px;
+    align-items:start;
+  }
+  .side-box{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+    margin-bottom:20px;
+  }
+  .side-box h3{
+    margin:0 0 12px;
+    font-size:16px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .side-box ul{
+    list-style:none;
+    margin:0;padding:0;
+    font-size:14.6px;
+  }
+  .side-box li{
+    padding:8px 0;
+    border-bottom:1px dashed var(--line);
+    color:var(--ink-soft);
+  }
+  .side-box li:last-child{border-bottom:none;}
+  .side-box li a{color:var(--ink);}
+  .side-box li a:hover{color:var(--brand);}
+
+  /* ---------- 页脚 ---------- */
+  .site-footer{
+    background:#141b2b;
+    color:#a8b3c7;
+    padding:38px 0 26px;
+    font-size:14.2px;
+    margin-top:20px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:26px;
+    margin-bottom:26px;
+  }
+  .site-footer h4{
+    color:#fff;
+    font-size:15px;
+    margin:0 0 12px;
+  }
+  .site-footer ul{
+    list-style:none;
+    margin:0;padding:0;
+  }
+  .site-footer li{padding:4px 0;}
+  .site-footer a{color:#a8b3c7;}
+  .site-footer a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid #26304a;
+    padding-top:16px;
+    text-align:center;
+    font-size:13.4px;
+    color:#7d8aa3;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:960px){
+    .hero{grid-template-columns:1fr;gap:24px;}
+    .grid-3{grid-template-columns:repeat(2,1fr);}
+    .split{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:680px){
+    body{font-size:15.4px;}
+    .topbar{flex-direction:column;align-items:flex-start;gap:10px;}
+    .nav{gap:4px;}
+    .nav a{padding:5px 10px;font-size:13.8px;}
+    .hero h1{font-size:24px;}
+    .grid-3,.grid-2,.job-list{grid-template-columns:1fr;}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px;}
+    .version-table{display:block;overflow-x:auto;white-space:nowrap;}
+    .footer-grid{grid-template-columns:1fr;}
+    main{padding:30px 0 10px;}
+    section{margin-bottom:38px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="#top">
+        <span class="logo-mark">枫</span>
+        冒险岛sf海 · 资料索引
+      </a>
+      <nav class="nav">
+        <a href="#intro">概念说明</a>
+        <a href="#version">版本区别</a>
+        <a href="#jobs">职业选择</a>
+        <a href="#route">任务路线</a>
+        <a href="#faq">常见问题</a>
+        <a href="#safety">安全提醒</a>
+      </nav>
+    </div>
+
+    <div class="hero" id="top">
+      <div>
+        <h1>冒险岛sf海：怀旧版本资料与玩法整理站</h1>
+        <p>很多玩家搜索“冒险岛sf海”，往往是想弄清楚这类非官方服务器和官方怀旧版本到底差在哪里、适合什么人群、进去之后该从哪里开始。本站把版本区别、职业取向、任务路线与安全注意事项集中整理，方便你按自己的节奏查看，而不是被零散信息牵着走。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#intro">先看概念说明</a>
+          <a class="btn btn-ghost" href="#faq">跳转常见问题</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h2>阅读前先了解三件事</h2>
+        <ul>
+          <li><span>01</span>非官方服务器来源复杂，稳定性与数据安全无法保证</li>
+          <li><span>02</span>版本经验倍率、掉落与商城设置差异较大，需逐项确认</li>
+          <li><span>03</span>账号密码尽量与常用邮箱、支付账号完全区分</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 概念说明 -->
+  <section id="intro">
+    <div class="sec-head">
+      <div>
+        <h2>冒险岛sf海到底指什么</h2>
+        <p>先厘清概念，再决定要不要继续了解</p>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="tag tag-blue">概念</span>
+        <h3>“sf”是私服的常见缩写</h3>
+        <p>在玩家社区里，“sf”通常被用来指代非官方运营的服务器。它们多由个人或小团队搭建，基于冒险岛早期版本的客户端与服务端程序进行修改，因此常被统称为怀旧向的私服。</p>
+        <p>“海”在这里更多是一种聚合、汇集的说法，表示把分散的版本信息、玩法资料集中到一处，方便对比和查找。</p>
+      </article>
+      <article class="card">
+        <span class="tag tag-orange">背景</span>
+        <h3>为什么会有怀旧需求</h3>
+        <p>冒险岛早期版本以慢节奏、强社交、地图探索感强著称。随着官方版本不断迭代，界面、数值和玩法重心发生变化，一部分老玩家更怀念当年的节奏，这种需求催生了怀旧生态。</p>
+        <p>需要说明的是，怀旧偏好本身没有问题，但承载怀旧需求的非官方服务器存在合规与安全上的不确定性。</p>
+      </article>
+      <article class="card">
+        <span class="tag tag-green">定位</span>
+        <h3>本站提供什么</h3>
+        <p>本站是资料索引性质的页面，整理版本差异、职业取向、任务路线与常见疑问，帮助读者建立基本判断框架。</p>
+        <p>本站不提供服务器下载、不推荐具体私服、不参与任何运营，也不对第三方服务器的内容与安全性作出担保。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版本区别 -->
+  <section id="version">
+    <div class="sec-head">
+      <div>
+        <h2>官方怀旧版本与非官方服务器的差异</h2>
+        <p>从几个关键维度做对照，避免混为一谈</p>
+      </div>
+    </div>
+    <table class="version-table">
+      <thead>
+        <tr>
+          <th>对比维度</th>
+          <th>官方怀旧版本</th>
+          <th>非官方服务器</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>运营主体</td>
+          <td>由游戏官方团队运营，有公开的规则与客服渠道</td>
+          <td>多为个人或小团队搭建，运营主体通常不透明</td>
+        </tr>
+        <tr>
+          <td>版本基础</td>
+          <td>基于官方历史版本还原，节奏相对统一</td>
+          <td>基于早期客户端修改，版本号与内容差异较大</td>
+        </tr>
+        <tr>
+          <td>经验与掉落</td>
+          <td>数值由官方设定，相对稳定</td>
+          <td>倍率、掉落、商城设置由搭建者自行调整，需逐项确认</td>
+        </tr>
+        <tr>
+          <td>数据安全</td>
+          <td>账号体系受官方安全机制保护</td>
+          <td>账号数据保存在第三方，泄露风险难以评估</td>
+        </tr>
+        <tr>
+          <td>持续运营</td>
+          <td>有较明确的版本更新与维护计划</td>
+          <td>可能随时关停、回档或更换地址</td>
+        </tr>
+        <tr>
+          <td>合规性</td>
+          <td>具备正式授权与运营资质</td>
+          <td>通常未获得授权，存在法律与合规风险</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 职业选择 -->
+  <section id="jobs">
+    <div class="sec-head">
+      <div>
+        <h2>怀旧版本里的职业取向参考</h2>
+        <p>不同版本数值不同，以下为常见思路，仅供建立认知</p>
+      </div>
+    </div>
+    <div class="job-list">
+      <article class="job-item">
+        <h3>战士系：容错高，适合起步</h3>
+        <p>血量成长较高，前期抗打击能力强，操作门槛相对低，适合不熟悉地图与怪物分布的新手。缺点是部分版本中后期输出成长偏平缓。</p>
+      </article>
+      <article class="job-item">
+        <h3>法师系：清怪效率突出</h3>
+        <p>范围技能在刷图场景中优势明显，适合喜欢效率刷怪、快速积累资源的玩家。需要注意蓝耗管理与前期生存能力偏弱的问题。</p>
+      </article>
+      <article class="job-item">
+        <h3>弓箭手系：远程消耗型</h3>
+        <p>依靠距离优势进行输出，对走位有一定要求。在部分版本中单体输出表现稳定，适合习惯边打边调整站位的玩家。</p>
+      </article>
+      <article class="job-item">
+        <h3>飞侠系：机动与爆发兼顾</h3>
+        <p>移动灵活，部分分支具备较高爆发。操作上限高，但容错率相对低，更适合对游戏节奏已经比较熟悉的玩家。</p>
+      </article>
+      <article class="job-item">
+        <h3>海盗系：定位随版本波动</h3>
+        <p>不同版本对海盗系的数值处理差异较大，有的偏近战、有的偏向远程。选择前建议先确认目标版本的具体技能设定。</p>
+      </article>
+      <article class="job-item">
+        <h3>辅助与团队型定位</h3>
+        <p>怀旧版本中组队收益往往较高，具备增益或治疗能力的定位在固定队伍里更受欢迎，也更容易获得稳定的组队机会。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 任务路线 + 侧栏 -->
+  <section id="route">
+    <div class="sec-head">
+      <div>
+        <h2>从零开始的任务与升级路线思路</h2>
+        <p>按阶段推进，减少来回跑图的时间浪费</p>
+      </div>
+    </div>
+    <div class="split">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>第一阶段：新手村与基础操作</h3>
+            <p>完成出生地图的引导任务，熟悉移动、跳跃、攻击与技能释放。这一阶段不必追求效率，重点是把手感和快捷键设置顺手。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>第二阶段：转职前的等级铺垫</h3>
+            <p>按主线任务推进，顺路清理沿途怪物。转职前建议把属性点分配思路确定下来，避免后期需要重置。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>第三阶段：一转后的地图选择</h3>
+            <p>一转完成后，优先选择怪物等级略低于自身、密度较高的地图，兼顾经验获取与药水消耗的平衡。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>第四阶段：二转与技能成型</h3>
+            <p>二转后技能体系逐渐成型，可以根据职业特点选择刷图路线。此时开始关注装备强化与资源积累。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>第五阶段：组队与副本内容</h3>
+            <p>中后期组队收益提升，固定队伍能明显降低难度。建议提前沟通分工，明确输出、辅助与拉怪的角色分配。</p>
+          </div>
+          <div class="timeline-item">
+            <h3>第六阶段：长期目标规划</h3>
+            <p>确定自己是想冲等级、收集装备还是体验剧情，目标不同，投入的时间和路线安排差别很大。</p>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <div class="side-box">
+          <h3>路线规划小提示</h3>
+          <ul>
+            <li>优先做能顺路完成的任务，避免反复跨图</li>
+            <li>药水消耗高的地图，先评估收益是否划算</li>
+            <li>等级压制明显时，换图比硬刷更省时间</li>
+            <li>组队前确认队员目标是否一致</li>
+            <li>重要道具提前整理背包，减少来回存取</li>
+          </ul>
+        </div>
+        <div class="side-box">
+          <h3>常见地图类型</h3>
+          <ul>
+            <li>低密度安全图：适合新手熟悉操作</li>
+            <li>高密度刷怪图：经验效率较高，消耗也大</li>
+            <li>任务专属图：通常有进入条件限制</li>
+            <li>组队副本图：需要配合，单人难度较高</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 安全提醒 -->
+  <section id="safety">
+    <div class="sec-head">
+      <div>
+        <h2>参与非官方服务器前必须知道的风险</h2>
+        <p>这部分内容比玩法更值得优先阅读</p>
+      </div>
+    </div>
+    <div class="notice">
+      <strong>重要提醒：</strong>非官方服务器通常未获得游戏版权方的授权，其运营行为可能涉及侵权。同时，账号数据由第三方保管，存在被收集、泄露或滥用的可能。请在充分了解风险的前提下自行判断，本站不提供任何服务器入口、下载链接或充值渠道。
+    </div>
+    <div class="grid grid-2" style="margin-top:20px;">
+      <article class="card">
+        <h3>账号与密码安全</h3>
+        <p>不要使用与邮箱、社交平台、支付工具相同的账号密码。建议为这类用途单独设置一套完全独立的凭据，降低连带风险。</p>
+      </article>
+      <article class="card">
+        <h3>客户端来源风险</h3>
+        <p>来路不明的客户端可能被植入额外程序。若无法确认文件来源与校验信息，不建议在本机或存有重要资料的设备上运行。</p>
+      </article>
+      <article class="card">
+        <h3>充值与交易风险</h3>
+        <p>非官方渠道的充值缺乏保障，一旦服务器关停或运营方失联，投入通常难以追回。请谨慎对待任何形式的付费引导。</p>
+      </article>
+      <article class="card">
+        <h3>个人信息保护</h3>
+        <p>注册时尽量不填写真实姓名、手机号、身份证等敏感信息。遇到强制索取与游戏无关资料的情况，应提高警惕。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="sec-head">
+      <div>
+        <h2>关于冒险岛sf海的常见问题</h2>
+        <p>整理搜索者最常提出的疑问</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">“冒险岛sf海”是一个具体的服务器名称吗？<span class="arrow">▼</span></button>
+      <div class="faq-a">从常见用法看，它更多是一个组合式搜索词，用于查找与冒险岛非官方服务器、怀旧版本相关的聚合信息，而不是特指某一个固定服务器。不同时间、不同社区里指向的内容可能并不一致。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">玩非官方服务器和官方怀旧服有什么区别？<span class="arrow">▼</span></button>
+      <div class="faq-a">主要差异在运营主体、版本设定、数据安全和持续运营能力上。官方怀旧服有明确的运营方与规则，非官方服务器则往往由个人或小团队维护，倍率、掉落和商城设置各不相同，稳定性也难以预期。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">怀旧版本里新手选什么职业比较稳妥？<span class="arrow">▼</span></button>
+      <div class="faq-a">如果对地图和怪物还不熟悉，战士系通常容错更高，前期不容易被秒。喜欢效率刷怪的可以考虑法师系。最终还是要结合目标版本的具体数值设定来判断，不同版本的职业强度排序可能差别很大。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">升级速度慢是正常的吗？<span class="arrow">▼</span></button>
+      <div class="faq-a">怀旧版本的设计初衷就是偏慢节奏，等级成长需要时间投入。如果感觉明显卡住，通常是地图选择与当前等级不匹配，可以尝试调整到怪物等级更合适的区域，或通过组队提升效率。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">如何判断一个非官方服务器是否值得尝试？<span class="arrow">▼</span></button>
+      <div class="faq-a">本站不建议对具体服务器作出推荐。可以关注的方向包括：运营方是否公开透明、规则说明是否清晰、是否存在过度索取个人信息或强制付费的情况。任何要求提供敏感资料或引导大额充值的行为，都应当谨慎对待。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">本站会提供下载或注册入口吗？<span class="arrow">▼</span></button>
+      <div class="faq-a">不会。本站是纯资料索引页面，不提供客户端下载、不提供注册链接、不参与任何服务器运营，也不对第三方内容承担担保责任。</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>冒险岛sf海 · 资料索引</h4>
+        <p style="margin:0;color:#8b97ad;">围绕冒险岛怀旧版本与非官方服务器生态，整理概念说明、版本对比、职业取向、任务路线与安全提示等参考资料，帮助读者建立基本判断框架。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#intro">概念说明</a></li>
+          <li><a href="#version">版本区别</a></li>
+          <li><a href="#jobs">职业选择</a></li>
+          <li><a href="#route">任务路线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>风险提示</h4>
+        <ul>
+          <li><a href="#safety">安全注意事项</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li>本站不提供任何下载与注册入口</li>
+          <li>请自行评估第三方服务风险</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> 冒险岛sf海资料索引 · 本站为信息整理页面，与任何游戏官方及第三方服务器运营方均无关联
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var faqButtons = document.querySelectorAll('.faq-q');
+  for (var i = 0; i < faqButtons.length; i++) {
+    faqButtons[i].addEventListener('click', function () {
+      var item = this.parentNode;
+      var isOpen = item.classList.contains('open');
+      var allItems = document.querySelectorAll('.faq-item');
+      for (var j = 0; j < allItems.length; j++) {
+        allItems[j].classList.remove('open');
+      }
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  }
+</script>
+
+</body>
+  </html>
